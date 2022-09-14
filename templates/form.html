@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./static/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT-Downloader</title>
+</head>
+<body>
+    <div id="subscription_area">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="subscribe_now">
+                <h4>PM-downloader</h4>
+                <p>If you want to download video put the YT URL to MP4</p>
+                <form class="subscribe_form" action="{{ url_for('download') }}" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="url" placeholder="Enter your url">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Download</button>
+                    </span>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
