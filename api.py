@@ -18,7 +18,7 @@ def download():
         stream = yt.streams.get_by_itag(22)
         stream.stream_to_buffer(buffer)
         buffer.seek(0)
-        return send_file(buffer, as_attachment=True, download_name="Video - {yt.title}", mimetype="video/mp4")
+        return send_file(buffer, as_attachment=True, download_name="Video - {yt.title}.mp4", mimetype="video/mp4")
     return redirect(url_for('home'))
 
 if __name__ =='__main__':
